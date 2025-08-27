@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -55,8 +56,17 @@
         }
 
         @keyframes twinkle {
-            0%, 100% { opacity: 0.2; transform: scale(0.8); }
-            50% { opacity: 1; transform: scale(1.2); }
+
+            0%,
+            100% {
+                opacity: 0.2;
+                transform: scale(0.8);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.2);
+            }
         }
 
         .quantum-ripples {
@@ -76,8 +86,15 @@
         }
 
         @keyframes ripple-wave {
-            0% { transform: scale(0); opacity: 0.5; }
-            100% { transform: scale(10); opacity: 0; }
+            0% {
+                transform: scale(0);
+                opacity: 0.5;
+            }
+
+            100% {
+                transform: scale(10);
+                opacity: 0;
+            }
         }
 
         .chatbot-container {
@@ -90,8 +107,8 @@
             -webkit-backdrop-filter: blur(20px);
             border-radius: 0;
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4),
-                        0 0 0 1px rgba(255, 255, 255, 0.05),
-                        0 0 30px 5px rgba(0, 240, 255, 0.15);
+                0 0 0 1px rgba(255, 255, 255, 0.05),
+                0 0 30px 5px rgba(0, 240, 255, 0.15);
             overflow: hidden;
             display: flex;
             flex-direction: column;
@@ -106,12 +123,25 @@
                 height: 700px;
                 animation: float 8s ease-in-out infinite;
             }
-            
+
             @keyframes float {
-                0%, 100% { transform: translateY(0) rotateX(0deg) rotateY(0deg); }
-                25% { transform: translateY(-15px) rotateX(2deg) rotateY(1deg); }
-                50% { transform: translateY(0) rotateX(0deg) rotateY(-1deg); }
-                75% { transform: translateY(-10px) rotateX(-1deg) rotateY(0deg); }
+
+                0%,
+                100% {
+                    transform: translateY(0) rotateX(0deg) rotateY(0deg);
+                }
+
+                25% {
+                    transform: translateY(-15px) rotateX(2deg) rotateY(1deg);
+                }
+
+                50% {
+                    transform: translateY(0) rotateX(0deg) rotateY(-1deg);
+                }
+
+                75% {
+                    transform: translateY(-10px) rotateX(-1deg) rotateY(0deg);
+                }
             }
         }
 
@@ -121,12 +151,10 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(
-                135deg,
-                rgba(0, 240, 255, 0.03) 0%,
-                rgba(236, 72, 153, 0.03) 50%,
-                rgba(124, 58, 237, 0.03) 100%
-            );
+            background: linear-gradient(135deg,
+                    rgba(0, 240, 255, 0.03) 0%,
+                    rgba(236, 72, 153, 0.03) 50%,
+                    rgba(124, 58, 237, 0.03) 100%);
             opacity: 0.5;
             pointer-events: none;
             z-index: 0;
@@ -139,13 +167,11 @@
             right: -2px;
             bottom: -2px;
             border-radius: 30px;
-            background: linear-gradient(
-                45deg,
-                var(--quantum-blue),
-                var(--nebula-pink),
-                var(--cosmic-purple),
-                var(--quantum-blue)
-            );
+            background: linear-gradient(45deg,
+                    var(--quantum-blue),
+                    var(--nebula-pink),
+                    var(--cosmic-purple),
+                    var(--quantum-blue));
             background-size: 300% 300%;
             z-index: -1;
             animation: gradient-border 8s ease infinite;
@@ -154,18 +180,24 @@
         }
 
         @keyframes gradient-border {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
         }
 
         .chatbot-header {
             padding: 16px 20px;
-            background: linear-gradient(
-                90deg, 
-                rgba(15, 23, 42, 0.8) 0%, 
-                rgba(30, 41, 59, 0.6) 100%
-            );
+            background: linear-gradient(90deg,
+                    rgba(15, 23, 42, 0.8) 0%,
+                    rgba(30, 41, 59, 0.6) 100%);
             display: flex;
             align-items: center;
             gap: 12px;
@@ -179,11 +211,9 @@
             width: 48px;
             height: 48px;
             border-radius: 50%;
-            background: linear-gradient(
-                135deg, 
-                var(--cosmic-purple) 0%, 
-                var(--nebula-pink) 100%
-            );
+            background: linear-gradient(135deg,
+                    var(--cosmic-purple) 0%,
+                    var(--nebula-pink) 100%);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -193,8 +223,13 @@
         }
 
         @keyframes orb-glow {
-            0% { box-shadow: 0 0 15px rgba(124, 58, 237, 0.4); }
-            100% { box-shadow: 0 0 30px rgba(124, 58, 237, 0.7); }
+            0% {
+                box-shadow: 0 0 15px rgba(124, 58, 237, 0.4);
+            }
+
+            100% {
+                box-shadow: 0 0 30px rgba(124, 58, 237, 0.7);
+            }
         }
 
         .avatar-core {
@@ -217,19 +252,28 @@
             width: 100%;
             height: 100%;
             border-radius: 50%;
-            background: radial-gradient(
-                circle at center,
-                rgba(0, 240, 255, 0.3) 0%,
-                transparent 70%
-            );
+            background: radial-gradient(circle at center,
+                    rgba(0, 240, 255, 0.3) 0%,
+                    transparent 70%);
             animation: core-pulse 2.5s infinite ease-out;
             opacity: 0;
         }
 
         @keyframes core-pulse {
-            0% { transform: scale(0.8); opacity: 0; }
-            50% { transform: scale(1.1); opacity: 0.6; }
-            100% { transform: scale(1.5); opacity: 0; }
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+
+            50% {
+                transform: scale(1.1);
+                opacity: 0.6;
+            }
+
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
         }
 
         .header-info {
@@ -241,11 +285,9 @@
             font-size: 18px;
             font-weight: 600;
             margin-bottom: 2px;
-            background: linear-gradient(
-                90deg, 
-                var(--starlight), 
-                var(--moon-dust)
-            );
+            background: linear-gradient(90deg,
+                    var(--starlight),
+                    var(--moon-dust));
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -290,9 +332,20 @@
         }
 
         @keyframes status-pulse {
-            0% { transform: scale(0.8); opacity: 0.4; }
-            70% { transform: scale(1.3); opacity: 0; }
-            100% { transform: scale(0.8); opacity: 0; }
+            0% {
+                transform: scale(0.8);
+                opacity: 0.4;
+            }
+
+            70% {
+                transform: scale(1.3);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
         }
 
         .header-actions {
@@ -324,12 +377,10 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(
-                45deg,
-                transparent,
-                rgba(255, 255, 255, 0.1),
-                transparent
-            );
+            background: linear-gradient(45deg,
+                    transparent,
+                    rgba(255, 255, 255, 0.1),
+                    transparent);
             transform: translateX(-100%);
             transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
@@ -378,7 +429,10 @@
         }
 
         @keyframes message-appear {
-            to { opacity: 1; transform: translateY(0); }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .bot-message {
@@ -392,11 +446,9 @@
 
         .user-message {
             align-self: flex-end;
-            background: linear-gradient(
-                135deg, 
-                var(--cosmic-purple) 0%, 
-                var(--nebula-pink) 100%
-            );
+            background: linear-gradient(135deg,
+                    var(--cosmic-purple) 0%,
+                    var(--nebula-pink) 100%);
             border-top-right-radius: 6px;
             color: white;
             box-shadow: 0 5px 20px rgba(124, 58, 237, 0.3);
@@ -435,8 +487,18 @@
         }
 
         @keyframes typing-animation {
-            0%, 60%, 100% { transform: translateY(0); opacity: 0.6; }
-            30% { transform: translateY(-6px); opacity: 1; }
+
+            0%,
+            60%,
+            100% {
+                transform: translateY(0);
+                opacity: 0.6;
+            }
+
+            30% {
+                transform: translateY(-6px);
+                opacity: 1;
+            }
         }
 
         .message-time {
@@ -454,11 +516,9 @@
 
         .chatbot-input-container {
             padding: 12px;
-            background: linear-gradient(
-                180deg, 
-                rgba(15, 23, 42, 0.4) 0%, 
-                rgba(15, 23, 42, 0.8) 100%
-            );
+            background: linear-gradient(180deg,
+                    rgba(15, 23, 42, 0.4) 0%,
+                    rgba(15, 23, 42, 0.8) 100%);
             border-top: 1px solid rgba(255, 255, 255, 0.08);
             display: flex;
             gap: 8px;
@@ -500,11 +560,9 @@
             width: 48px;
             height: 48px;
             border-radius: 50%;
-            background: linear-gradient(
-                135deg, 
-                var(--cosmic-purple) 0%, 
-                var(--nebula-pink) 100%
-            );
+            background: linear-gradient(135deg,
+                    var(--cosmic-purple) 0%,
+                    var(--nebula-pink) 100%);
             border: none;
             color: white;
             display: flex;
@@ -525,12 +583,10 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(
-                45deg,
-                transparent,
-                rgba(255, 255, 255, 0.2),
-                transparent
-            );
+            background: linear-gradient(45deg,
+                    transparent,
+                    rgba(255, 255, 255, 0.2),
+                    transparent);
             transform: translateX(-100%);
             transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
@@ -651,8 +707,13 @@
         }
 
         @keyframes quantum-spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
         .quantum-dots {
@@ -673,8 +734,13 @@
         }
 
         @keyframes dot-orbit {
-            0% { transform: rotate(0deg) translateX(32px) rotate(0deg); }
-            100% { transform: rotate(360deg) translateX(32px) rotate(-360deg); }
+            0% {
+                transform: rotate(0deg) translateX(32px) rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg) translateX(32px) rotate(-360deg);
+            }
         }
 
         .welcome-screen {
@@ -683,11 +749,9 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(
-                135deg, 
-                var(--deep-space) 0%, 
-                #1e293b 100%
-            );
+            background: linear-gradient(135deg,
+                    var(--deep-space) 0%,
+                    #1e293b 100%);
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -719,11 +783,9 @@
         .welcome-text h2 {
             font-size: 24px;
             margin-bottom: 12px;
-            background: linear-gradient(
-                90deg, 
-                var(--starlight), 
-                var(--moon-dust)
-            );
+            background: linear-gradient(90deg,
+                    var(--starlight),
+                    var(--moon-dust));
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -741,11 +803,9 @@
         .start-quantum {
             padding: 14px 32px;
             border-radius: 28px;
-            background: linear-gradient(
-                135deg, 
-                var(--cosmic-purple) 0%, 
-                var(--nebula-pink) 100%
-            );
+            background: linear-gradient(135deg,
+                    var(--cosmic-purple) 0%,
+                    var(--nebula-pink) 100%);
             border: none;
             color: white;
             font-weight: 600;
@@ -763,12 +823,10 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(
-                90deg,
-                transparent,
-                rgba(255, 255, 255, 0.2),
-                transparent
-            );
+            background: linear-gradient(90deg,
+                    transparent,
+                    rgba(255, 255, 255, 0.2),
+                    transparent);
             transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
 
@@ -796,10 +854,8 @@
         }
 
         .chatbot-messages::-webkit-scrollbar-thumb {
-            background: linear-gradient(
-                var(--cosmic-purple), 
-                var(--nebula-pink)
-            );
+            background: linear-gradient(var(--cosmic-purple),
+                    var(--nebula-pink));
             border-radius: 3px;
         }
 
@@ -888,27 +944,27 @@
                 padding: 12px 16px;
                 min-height: 64px;
             }
-            
+
             .chatbot-messages {
                 padding: 12px;
                 gap: 8px;
             }
-            
+
             .message {
                 padding: 10px 14px;
                 font-size: 13px;
             }
-            
+
             .chatbot-input-container {
                 padding: 10px;
             }
-            
+
             .quantum-input {
                 padding: 10px 14px;
                 font-size: 13px;
                 min-height: 44px;
             }
-            
+
             .send-quantum {
                 width: 44px;
                 height: 44px;
@@ -920,66 +976,66 @@
             .chatbot-container {
                 height: 700px;
             }
-            
+
             .chatbot-header {
                 padding: 20px;
             }
-            
+
             .avatar-orb {
                 width: 56px;
                 height: 56px;
             }
-            
+
             .avatar-core {
                 width: 50px;
                 height: 50px;
                 font-size: 20px;
             }
-            
+
             .header-info h2 {
                 font-size: 20px;
             }
-            
+
             .header-info p {
                 font-size: 13px;
             }
-            
+
             .quantum-btn {
                 width: 34px;
                 height: 34px;
             }
-            
+
             .quantum-btn svg {
                 width: 18px;
                 height: 18px;
             }
-            
+
             .chatbot-messages {
                 padding: 20px;
                 gap: 16px;
             }
-            
+
             .message {
                 padding: 14px 18px;
                 font-size: 15px;
                 max-width: 80%;
             }
-            
+
             .chatbot-input-container {
                 padding: 16px;
                 gap: 12px;
             }
-            
+
             .quantum-input {
                 padding: 14px 18px;
                 font-size: 15px;
             }
-            
+
             .send-quantum {
                 width: 50px;
                 height: 50px;
             }
-            
+
             .send-quantum svg {
                 width: 22px;
                 height: 22px;
@@ -987,25 +1043,27 @@
         }
     </style>
 </head>
+
 <body>
     <div class="cosmic-background" id="cosmicBg"></div>
     <div class="quantum-ripples" id="quantumRipples"></div>
-    
+
     <div class="chatbot-container">
         <div class="holographic-overlay"></div>
         <div class="quantum-border"></div>
-        
+
         <div class="welcome-screen" id="welcomeScreen">
             <div class="welcome-orb">
                 <div class="orb-animation" id="orbAnimation"></div>
             </div>
             <div class="welcome-text">
                 <h2>Quantum AI Assistant</h2>
-                <p>Welcome to the next-generation AI interface. I'm here to showcase advanced machine learning capabilities through this cutting-edge conversational experience.</p>
+                <p>Welcome to the next-generation AI interface. I'm here to showcase advanced machine learning
+                    capabilities through this cutting-edge conversational experience.</p>
             </div>
             <button class="start-quantum" id="startQuantumBtn">Activate AI</button>
         </div>
-        
+
         <div class="chatbot-header">
             <div class="avatar-orb">
                 <div class="avatar-core">
@@ -1019,25 +1077,39 @@
             </div>
             <div class="header-actions">
                 <button class="quantum-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="1"></circle>
+                        <circle cx="12" cy="5" r="1"></circle>
+                        <circle cx="12" cy="19" r="1"></circle>
+                    </svg>
                 </button>
                 <button class="quantum-btn" id="closeQuantumBtn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
                 </button>
             </div>
         </div>
-        
+
         <div class="chatbot-messages" id="quantumMessages">
             <!-- Messages will be added here dynamically -->
         </div>
-        
+
         <div class="chatbot-input-container">
-            <textarea class="quantum-input" id="quantumInput" placeholder="Query the neural network..." rows="1"></textarea>
+            <textarea class="quantum-input" id="quantumInput" placeholder="Query the neural network..."
+                rows="1"></textarea>
             <button class="send-quantum" id="sendQuantumBtn">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
             </button>
         </div>
-        
+
         <div class="ai-processing" id="aiProcessing">
             <div class="quantum-loader">
                 <div class="quantum-sphere"></div>
@@ -1050,61 +1122,65 @@
     </div>
 
     <div class="quantum-toast" id="quantumToast">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+        </svg>
         <span id="toastMessage">Message copied to clipboard</span>
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Create cosmic background
             const cosmicBg = document.getElementById('cosmicBg');
             for (let i = 0; i < 100; i++) {
                 const star = document.createElement('div');
                 star.classList.add('star');
-                
+
                 const size = Math.random() * 2 + 1;
                 star.style.width = `${size}px`;
                 star.style.height = `${size}px`;
-                
+
                 star.style.left = `${Math.random() * 100}%`;
                 star.style.top = `${Math.random() * 100}%`;
-                
+
                 star.style.setProperty('--duration', `${Math.random() * 5 + 3}s`);
                 star.style.animationDelay = `${Math.random() * 5}s`;
-                
+
                 cosmicBg.appendChild(star);
             }
-            
+
             // Create quantum ripples
             const quantumRipples = document.getElementById('quantumRipples');
             function createRipple() {
                 const ripple = document.createElement('div');
                 ripple.classList.add('ripple');
-                
+
                 const x = Math.random() * 100;
                 const y = Math.random() * 100;
                 ripple.style.left = `${x}%`;
                 ripple.style.top = `${y}%`;
-                
+
                 const size = Math.random() * 150 + 80;
                 ripple.style.width = `${size}px`;
                 ripple.style.height = `${size}px`;
-                
+
                 ripple.style.animationDelay = `${Math.random() * 3}s`;
-                
+
                 quantumRipples.appendChild(ripple);
-                
+
                 setTimeout(() => {
                     ripple.remove();
                 }, 12000);
             }
-            
+
             for (let i = 0; i < 3; i++) {
                 createRipple();
             }
-            
+
             setInterval(createRipple, 3000);
-            
+
             // Create quantum dots for loader
             const quantumDots = document.getElementById('quantumDots');
             for (let i = 0; i < 6; i++) {
@@ -1114,7 +1190,7 @@
                 dot.style.animationDelay = `${i * 0.2}s`;
                 quantumDots.appendChild(dot);
             }
-            
+
             // Chat functionality
             const welcomeScreen = document.getElementById('welcomeScreen');
             const startQuantumBtn = document.getElementById('startQuantumBtn');
@@ -1125,14 +1201,14 @@
             const aiProcessing = document.getElementById('aiProcessing');
             const quantumToast = document.getElementById('quantumToast');
             const toastMessage = document.getElementById('toastMessage');
-            
+
             let isFirstMessage = true;
-            
+
             // Auto-resize textarea
-            quantumInput.addEventListener('input', function() {
+            quantumInput.addEventListener('input', function () {
                 this.style.height = 'auto';
                 this.style.height = (this.scrollHeight) + 'px';
-                
+
                 // Limit max height
                 if (this.scrollHeight > 120) {
                     this.style.overflowY = 'auto';
@@ -1140,7 +1216,7 @@
                     this.style.overflowY = 'hidden';
                 }
             });
-            
+
             // Sample bot responses
             const quantumResponses = [
                 "**Quantum neural network activated**\nHello! I'm your quantum AI assistant, ready to explore the frontiers of machine learning with you. What would you like to discuss?",
@@ -1150,78 +1226,78 @@
                 "**Natural language understanding engaged**\nI can provide detailed explanations of:\n```python\ndef machine_learning_model():\n    # Advanced AI code examples\n    return cutting_edge_results\n```\nWould you like to see specific implementations?",
                 "**Multimodal response ready**\nI'm designed to showcase how AI can:\n1. Understand complex queries\n2. Generate human-like responses\n3. Adapt to user preferences\nWhat would you like me to demonstrate?"
             ];
-            
+
             // Start quantum button click handler
-            startQuantumBtn.addEventListener('click', function() {
+            startQuantumBtn.addEventListener('click', function () {
                 welcomeScreen.classList.add('hidden');
-                
+
                 gsap.from(quantumMessages, {
                     duration: 0.8,
                     opacity: 0,
                     y: 50,
                     ease: "power3.out"
                 });
-                
+
                 setTimeout(() => {
                     addQuantumMessage(quantumResponses[0], 'bot');
                 }, 1000);
             });
-            
+
             // Close quantum button click handler
-            closeQuantumBtn.addEventListener('click', function() {
+            closeQuantumBtn.addEventListener('click', function () {
                 welcomeScreen.classList.remove('hidden');
                 quantumMessages.innerHTML = '';
                 isFirstMessage = true;
-                
+
                 createParticlesExplosion();
             });
-            
+
             // Send message function
-            function sendQuantumMessage() {
-                const message = quantumInput.value.trim();
-                if (message) {
-                    addQuantumMessage(message, 'user');
-                    quantumInput.value = '';
-                    quantumInput.style.height = 'auto';
-                    
-                    // Show processing animation
-                    setTimeout(() => {
-                        respondToQuantumMessage(message);
-                    }, 500);
-                }
+            async function sendMessage(message) {
+                const response = await fetch("http://127.0.0.1:5000/chat", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({ message })
+                });
+
+                const data = await response.json();
+                console.log("Bot reply:", data.reply);
             }
-            
+
+
             // Send button click handler
             sendQuantumBtn.addEventListener('click', sendQuantumMessage);
-            
+
             // Input field enter key handler (without shift)
-            quantumInput.addEventListener('keydown', function(e) {
+            quantumInput.addEventListener('keydown', function (e) {
                 if (e.key === 'Enter' && !e.shiftKey) {
                     e.preventDefault();
                     sendQuantumMessage();
                 }
             });
-            
+
             // Add quantum message to chat
             function addQuantumMessage(text, sender, isTyping = false) {
                 if (isTyping) {
                     const typingDiv = document.createElement('div');
                     typingDiv.classList.add('typing-indicator');
-                    
+
                     for (let i = 0; i < 3; i++) {
                         const dot = document.createElement('div');
                         dot.classList.add('typing-dot');
                         typingDiv.appendChild(dot);
                     }
-                    
+
                     quantumMessages.appendChild(typingDiv);
                     scrollToBottom();
-                    
+
                     return typingDiv;
                 } else {
                     const messageDiv = document.createElement('div');
                     messageDiv.classList.add('message', `${sender}-message`);
-                    
+
                     // Process markdown-like formatting
                     let processedText = text;
                     processedText = processedText.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
@@ -1229,22 +1305,22 @@
                     processedText = processedText.replace(/^\d\.\s(.*$)/gm, '<li>$1</li>');
                     processedText = processedText.replace(/```([a-z]*)\n([\s\S]*?)```/g, '<pre><code>$2</code></pre>');
                     processedText = processedText.replace(/\n/g, '<br>');
-                    
+
                     const messageContent = document.createElement('div');
                     messageContent.innerHTML = processedText;
-                    
+
                     const messageTime = document.createElement('div');
                     messageTime.classList.add('message-time');
                     messageTime.textContent = getCurrentTime();
-                    
+
                     messageDiv.appendChild(messageContent);
                     messageDiv.appendChild(messageTime);
-                    
+
                     // Add message options for bot messages
                     if (sender === 'bot') {
                         const optionsDiv = document.createElement('div');
                         optionsDiv.classList.add('message-options');
-                        
+
                         const copyOption = document.createElement('div');
                         copyOption.classList.add('option-btn');
                         copyOption.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg> Copy`;
@@ -1252,13 +1328,13 @@
                             navigator.clipboard.writeText(text);
                             showToast('Message copied to clipboard');
                         });
-                        
+
                         optionsDiv.appendChild(copyOption);
                         messageDiv.appendChild(optionsDiv);
                     }
-                    
+
                     quantumMessages.appendChild(messageDiv);
-                    
+
                     // Animate message appearance
                     gsap.from(messageDiv, {
                         duration: 0.4,
@@ -1266,29 +1342,29 @@
                         y: 20,
                         ease: "back.out"
                     });
-                    
+
                     scrollToBottom();
-                    
+
                     return messageDiv;
                 }
             }
-            
+
             // Simulate quantum bot response
             function respondToQuantumMessage(userMessage) {
                 // Show processing animation
                 aiProcessing.classList.add('active');
-                
+
                 gsap.from(aiProcessing, {
                     duration: 0.6,
                     opacity: 0,
                     y: 20,
                     ease: "power2.out"
                 });
-                
+
                 // Determine response based on user message
                 let response;
                 const lowerCaseMsg = userMessage.toLowerCase();
-                
+
                 if (lowerCaseMsg.includes('hello') || lowerCaseMsg.includes('hi') || lowerCaseMsg.includes('hey')) {
                     response = "**Quantum greeting protocol engaged**\nHello! I'm thrilled to interface with you through this advanced AI communication channel. What would you like to explore in the realm of artificial intelligence today?";
                 } else if (lowerCaseMsg.includes('project') || lowerCaseMsg.includes('work')) {
@@ -1306,16 +1382,16 @@
                     const randomIndex = Math.floor(Math.random() * (quantumResponses.length - 1)) + 1;
                     response = quantumResponses[randomIndex];
                 }
-                
+
                 // Simulate processing time
                 const processingTime = 1200 + Math.random() * 1200 + (response.length / 10);
-                
+
                 setTimeout(() => {
                     aiProcessing.classList.remove('active');
-                    
+
                     // Show typing indicator
                     const typingIndicator = addQuantumMessage('', 'bot', true);
-                    
+
                     // Simulate typing effect
                     let i = 0;
                     let currentMessage = '';
@@ -1324,7 +1400,7 @@
                             if (typingIndicator.parentNode) {
                                 quantumMessages.removeChild(typingIndicator);
                             }
-                            
+
                             currentMessage += response[i];
                             if (document.getElementById('quantum-typing')) {
                                 document.getElementById('quantum-typing').innerHTML = formatQuantumText(currentMessage);
@@ -1332,7 +1408,7 @@
                                 const botMessage = addQuantumMessage(currentMessage, 'bot');
                                 botMessage.id = 'quantum-typing';
                             }
-                            
+
                             i++;
                             scrollToBottom();
                         } else {
@@ -1344,7 +1420,7 @@
                     }, 20);
                 }, processingTime);
             }
-            
+
             // Format quantum text with progressive formatting
             function formatQuantumText(text) {
                 let processedText = text;
@@ -1355,41 +1431,41 @@
                 processedText = processedText.replace(/\n/g, '<br>');
                 return processedText;
             }
-            
+
             // Helper function to get current time
             function getCurrentTime() {
                 const now = new Date();
                 let hours = now.getHours();
                 let minutes = now.getMinutes();
                 const ampm = hours >= 12 ? 'PM' : 'AM';
-                
+
                 hours = hours % 12;
                 hours = hours ? hours : 12;
                 minutes = minutes < 10 ? '0' + minutes : minutes;
-                
+
                 return `${hours}:${minutes} ${ampm}`;
             }
-            
+
             // Scroll to bottom of chat
             function scrollToBottom() {
                 quantumMessages.scrollTop = quantumMessages.scrollHeight;
             }
-            
+
             // Show quantum toast notification
             function showToast(message) {
                 toastMessage.textContent = message;
                 quantumToast.classList.add('show');
-                
+
                 setTimeout(() => {
                     quantumToast.classList.remove('show');
                 }, 3000);
             }
-            
+
             // Create particles explosion effect
             function createParticlesExplosion() {
                 const particles = [];
                 const colors = ['#7c3aed', '#ec4899', '#00f0ff', '#f1f5f9'];
-                
+
                 for (let i = 0; i < 30; i++) {
                     const particle = document.createElement('div');
                     particle.style.position = 'absolute';
@@ -1402,10 +1478,10 @@
                     particle.style.pointerEvents = 'none';
                     particle.style.zIndex = '100';
                     particle.style.opacity = '0';
-                    
+
                     document.body.appendChild(particle);
                     particles.push(particle);
-                    
+
                     gsap.to(particle, {
                         x: (Math.random() - 0.5) * 200,
                         y: (Math.random() - 0.5) * 200,
@@ -1413,7 +1489,7 @@
                         duration: 0.4,
                         ease: "power2.out"
                     });
-                    
+
                     gsap.to(particle, {
                         opacity: 0,
                         scale: 0,
@@ -1426,7 +1502,7 @@
                     });
                 }
             }
-            
+
             // Initial welcome message after 3 seconds if user doesn't click start
             setTimeout(() => {
                 if (isFirstMessage && !welcomeScreen.classList.contains('hidden')) {
@@ -1437,7 +1513,7 @@
                     }, 1000);
                 }
             }, 3000);
-            
+
             // Add floating animation to container on desktop
             if (window.matchMedia('(min-width: 768px)').matches) {
                 gsap.to(".chatbot-container", {
@@ -1447,7 +1523,7 @@
                     yoyo: true,
                     ease: "sine.inOut"
                 });
-                
+
                 gsap.to(".chatbot-container", {
                     rotationY: 1,
                     rotationX: 1,
@@ -1457,16 +1533,17 @@
                     ease: "sine.inOut"
                 });
             }
-            
+
             // Handle mobile viewport height
             function adjustViewportHeight() {
                 let vh = window.innerHeight * 0.01;
                 document.documentElement.style.setProperty('--vh', `${vh}px`);
             }
-            
+
             adjustViewportHeight();
             window.addEventListener('resize', adjustViewportHeight);
         });
     </script>
 </body>
+
 </html>
