@@ -1,7 +1,6 @@
 import os
-from urllib import response
 import cohere
-from fastapi import FastAPI, Request
+from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from dotenv import load_dotenv
@@ -36,13 +35,17 @@ async def chat(req: ChatRequest):
 
     try:
         messages = [
-    {"role": "system", "content": "You are a friendly portfolio chatbot. Answer briefly."},
-    *([*req.history] if req.history else []),
-    {"role": "user", "content": req.message}
-]
+            {"role": "system", "content": "You are a friendly portfolio chatbot. Answer briefly."},
+            *([*req.history] if req.history else []),
+            {"role": "user", "content": req.message}
+        ]
+
+        # ✅ call cohere chat
+        response = co.chat(model="command-r", messages=messages)
 
         reply = response.message.content[0].text.strip()
         return {"reply": reply}
+
     except Exception as e:
         print("Error:", e)
         return {"reply": "⚠️ Error connecting to AI."}
